@@ -6,6 +6,8 @@
         <!--   <item name="colorPrimary">@color/colorPrimary</item>
            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
            <item name="colorAccent">@color/colorAccent</item>-->
+        <!-- <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+         <item name="android:buttonStyle">@style/RobotoButtonStyle</item>-->
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -17,27 +19,19 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-
-
-    <style name="ExtralargeFont">
-        <item name="android:textSize">18sp</item>
+    <style name="CustomFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_white</item>
+        <!--    <item name="android:typeface">op</item>-->
     </style>
 
-    <style name="LargeFont">
-        <item name="android:textSize">16sp</item>
-    </style>
 
-    <style name="MediumFont">
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="SmallFont">
-        <item name="android:textSize">12sp</item>
-    </style>
-
-    <style name="VerySmallFont">
-        <item name="android:textSize">10sp</item>
-    </style>
+    <!-- Setting the font name -->
+    <string name="fnt_OpenSans_bold">OpenSans-Bold.ttf</string>
+    <string name="fnt_OpenSans_light">OpenSani-Light.ttf</string>
+    <string name="fnt_OpenSans_Regular">OpenSans-Regular.ttf</string>
+    <string name="fnt_OpenSans_semi_bold">OpenSans-Semibold.ttf</string>
 
 
 </resources>

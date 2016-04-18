@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">BookerApplication</string>
     <string name="action_settings">Settings</string>
 
 
@@ -12,7 +12,7 @@
     <string name="sign_in">SIGN IN</string>
 
     <!--What,s this  Screen Strings-->
-    <string name="what_is_office_account">What\'s an Office 365 account?</string>
+    <string name="what_is_office_account">What\'s an Office 365\naccount?</string>
     <string name="instruction_one">Your email address is the same account\nyou use to sign in to your email at work.</string>
     <string name="instruction_two">Other email accounts,such as\nGmail,Yahoo and Outlook.com aren\'t\nsupported yet.</string>
     <string name="back">BACK</string>

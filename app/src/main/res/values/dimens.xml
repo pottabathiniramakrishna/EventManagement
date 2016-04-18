@@ -7,11 +7,21 @@
     <!--Logo dimensions-->
     <dimen name="logo_height">100dp</dimen>
     <dimen name="logo_width">100dp</dimen>
+
     <!--Margins-->
     <dimen name="margin_5dp">5dp</dimen>
     <dimen name="margin_10dp">10dp</dimen>
     <dimen name="margin_20dp">20dp</dimen>
     <dimen name="margin_30dp">30dp</dimen>
     <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
     <dimen name="edit_text_height">40dp</dimen>
+
+    <!--fonts-->
+    <dimen name="veryExtralargeFont">22sp</dimen>
+    <dimen name="ExtralargeFont">18sp</dimen>
+    <dimen name="LargeFont">16sp</dimen>
+    <dimen name="MediumFont">14sp</dimen>
+    <dimen name="SmallFont">12sp</dimen>
+    <dimen name="VerySmallFont">10sp</dimen>
 </resources>
