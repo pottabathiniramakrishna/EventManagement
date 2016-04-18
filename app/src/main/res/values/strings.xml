@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+
+
+
+    <!--Login Screen Strings-->
+    <string name="signin">Sign in</string>
+    <string name="use_office_account">Use your Office 365 account</string>
+    <string name="what_is_this">What\'s this?</string>
+    <string name="example_mail">someone@example.com</string>
+    <string name="sign_in">SIGN IN</string>
+
+    <!--What,s this  Screen Strings-->
+    <string name="what_is_office_account">What\'s an Office 365 account?</string>
+    <string name="instruction_one">Your email address is the same account\nyou use to sign in to your email at work.</string>
+    <string name="instruction_two">Other email accounts,such as\nGmail,Yahoo and Outlook.com aren\'t\nsupported yet.</string>
+    <string name="back">BACK</string>
+
+</resources>

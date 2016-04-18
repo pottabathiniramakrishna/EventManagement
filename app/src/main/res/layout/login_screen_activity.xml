@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/text_white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_50dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/ExtralargeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:text="@string/signin"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            style="@style/MediumFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:text="@string/use_office_account"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/whatsthis"
+            style="@style/LargeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:text="@string/what_is_this"
+            android:textColor="@color/primary" />
+
+        <inforica.myapplication.utils.MyEditText
+            android:id="@+id/amount_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_50dp"
+            android:gravity="left|center_vertical"
+            android:hint="@string/example_mail"
+            android:paddingLeft="10dip"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_hint"></inforica.myapplication.utils.MyEditText>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:textColor="@color/text_white"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        style="@style/MediumFont"
+        android:background="@color/primary"
+        android:text="@string/sign_in"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_30dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

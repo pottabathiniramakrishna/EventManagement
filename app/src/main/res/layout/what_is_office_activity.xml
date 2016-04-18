@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/text_white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_50dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/ExtralargeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:gravity="center"
+            android:text="@string/what_is_office_account"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            style="@style/LargeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:gravity="center"
+            android:text="@string/instruction_one"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            style="@style/LargeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:gravity="center"
+            android:text="@string/instruction_two"
+            android:textColor="@color/text_black" />
+        <!--  <Button
+              android:layout_width="fill_parent"
+              android:layout_height="@dimen/edit_text_height"
+              android:textColor="@color/text_white"
+              android:layout_marginLeft="@dimen/margin_20dp"
+              android:layout_marginRight="@dimen/margin_20dp"
+              style="@style/MediumFont"
+              android:background="@color/primary"
+              android:text="@string/back"
+              android:drawableLeft="@drawable/ic_arrow_back_white_18dp"
+              android:drawablePadding="@dimen/margin_5dp"
+              android:layout_marginTop="@dimen/margin_30dp"/>-->
+
+        <com.andexert.library.RippleView
+            android:id="@+id/back_button"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:background="@color/primary"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:clickable="false"
+                 android:src="@drawable/ic_arrow_back_white_18dp" />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/margin_5dp"
+                 android:clickable="false"
+                 android:text="@string/back"
+                 android:textColor="@color/text_white" />-->
+            <Button
+                style="@style/MediumFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_arrow_back_white_18dp"
+                android:drawablePadding="@dimen/margin_5dp"
+                android:text="@string/back"
+                android:textColor="@color/text_white" />
+        </com.andexert.library.RippleView>
+
+        <!--  <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/primary"
+              style="?android:attr/buttonBarStyle"
+              android:clickable="true">
+
+              <Button
+                  android:id="@+id/back_button_l"
+                  style="?android:attr/buttonBarButtonStyle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:drawableLeft="@drawable/ic_arrow_back_white_18dp"
+                  android:drawablePadding="6dp"
+                  android:duplicateParentState="true"
+                  android:gravity="center"
+                  android:text="New User"
+                  android:background="@null"
+                  android:clickable="true"
+                  android:textColor="@android:color/white"
+                  android:textSize="15sp" />
+
+          </RelativeLayout>-->
+    </LinearLayout>
+</LinearLayout>
