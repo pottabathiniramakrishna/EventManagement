@@ -45,7 +45,7 @@
             android:text="@string/what_is_this"
             android:textColor="@color/primary" />
 
-        <inforica.myapplication.utils.MyEditText
+        <com.inforica.booker.utils.MyEditText
             android:id="@+id/amount_et"
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_text_height"
@@ -58,7 +58,7 @@
             android:singleLine="true"
             android:textAlignment="center"
             android:textColor="@color/text_normal"
-            android:textColorHint="@color/text_hint"></inforica.myapplication.utils.MyEditText>
+            android:textColorHint="@color/text_hint"></com.inforica.booker.utils.MyEditText>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="@dimen/edit_text_height"
