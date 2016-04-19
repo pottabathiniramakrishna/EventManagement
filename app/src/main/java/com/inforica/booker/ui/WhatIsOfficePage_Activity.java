@@ -16,14 +16,13 @@ import com.inforica.booker.R;
 public class WhatIsOfficePage_Activity extends Activity implements View.OnClickListener {
     //    LinearLayout back_button;
     RippleView back_button;
-    Button back_button_l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.what_is_office_activity);
-//        back_button = (LinearLayout) findViewById(R.id.back_button);
         back_button = (RippleView) findViewById(R.id.back_button);
+//        ripple_layout_1 = (Button) findViewById(R.id.ripple_layout_1);
         back_button.setOnClickListener(this);
 
     }
@@ -32,8 +31,9 @@ public class WhatIsOfficePage_Activity extends Activity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back_button:
-                Intent i = new Intent(WhatIsOfficePage_Activity.this, Login_ScreenActivity.class);
-                startActivity(i);
+          /*      Intent i = new Intent(WhatIsOfficePage_Activity.this, Login_ScreenActivity.class);
+                startActivity(i);*/
+                onBackPressed();
                 break;
 
         }
