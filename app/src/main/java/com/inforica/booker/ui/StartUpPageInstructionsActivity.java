@@ -36,7 +36,7 @@ public class StartUpPageInstructionsActivity extends Activity {
     private String[] mResourceDescs;
     CustomPagerAdapter mCustomPagerAdapter;
     ViewPager mViewPager;
-    ImageView imageView;
+    ImageView imageView, done;
     TextView page_title, page_description;
 
     private Runnable animateViewPager;
@@ -62,7 +62,7 @@ public class StartUpPageInstructionsActivity extends Activity {
         mViewPager.setAdapter(mCustomPagerAdapter);
         mIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
         mIndicator.setViewPager(mViewPager);
-
+        done = (ImageView) findViewById(R.id.done);
         child_frame_LinearLayout = (LinearLayout) findViewById(R.id.child_drawer_frame);
 
         mViewPager.setOnTouchListener(new View.OnTouchListener() {
@@ -129,7 +129,10 @@ public class StartUpPageInstructionsActivity extends Activity {
             page_description.setText(mResourceDescs[position]);
 
             container.addView(itemView);
-
+            if (mResources[position] == 3) {
+                done.setVisibility(View.VISIBLE);
+//                mIndicator.set
+            }
 
             return itemView;
         }

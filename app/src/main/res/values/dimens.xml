@@ -7,6 +7,7 @@
     <!--Logo dimensions-->
     <dimen name="logo_height">100dp</dimen>
     <dimen name="logo_width">100dp</dimen>
+    <dimen name="divider_line_margin">0.5dp</dimen>
 
     <!--Margins-->
     <dimen name="margin_5dp">5dp</dimen>

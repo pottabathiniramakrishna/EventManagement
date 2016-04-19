@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
     xmlns:atts="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainDrawerLayout"
     android:layout_width="match_parent"
@@ -19,16 +20,24 @@
         android:id="@+id/child_drawer_frame"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_30dp"
         android:orientation="vertical">
 
 
         <com.inforica.booker.viewpager.CirclePageIndicator
             android:id="@+id/indicator"
             android:layout_width="fill_parent"
-            android:layout_height="@dimen/margin_50dp"
-            android:layout_alignBottom="@+id/pager"></com.inforica.booker.viewpager.CirclePageIndicator>
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pager"
+            android:padding="@dimen/margin_10dp"
+            app:radius="@dimen/margin_10dp"></com.inforica.booker.viewpager.CirclePageIndicator>
 
-
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_circle_white_36dp"
+            android:visibility="gone" />
     </LinearLayout>
 
 </LinearLayout>
