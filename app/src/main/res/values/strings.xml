@@ -3,18 +3,39 @@
     <string name="action_settings">Settings</string>
 
 
-
     <!--Login Screen Strings-->
+
     <string name="signin">Sign in</string>
     <string name="use_office_account">Use your Office 365 account</string>
     <string name="what_is_this">What\'s this?</string>
     <string name="example_mail">someone@example.com</string>
     <string name="sign_in">SIGN IN</string>
+    <string name="signin_progress">Sign in...</string>
 
     <!--What,s this  Screen Strings-->
+
     <string name="what_is_office_account">What\'s an Office 365\naccount?</string>
     <string name="instruction_one">Your email address is the same account\nyou use to sign in to your email at work.</string>
     <string name="instruction_two">Other email accounts,such as\nGmail,Yahoo and Outlook.com aren\'t\nsupported yet.</string>
     <string name="back">BACK</string>
 
+    <!--startup pages textview strings-->
+    <string name="page_one_title_text">Always up to date</string>
+    <string name="page_one_desc_text">You agenda keeps you up do\ndate by telling you where you\nneed to be and  when.</string>
+    <string name="page_two_title_text">Customers at your fingertips</string>
+    <string name="page_two_desc_text">See the details for all of your\ncustomers and contact them right\nfrom the app.</string>
+    <string name="page_three_title_text">Schedule on the go</string>
+    <string name="page_three_desc_text">Quickly make new bookings on\nthe move with the intuitive\nbooking assistant.</string>
+
+
+    <string-array name="page_titles_list">
+        <item>@string/page_one_title_text</item>
+        <item>@string/page_two_title_text</item>
+        <item>@string/page_three_title_text</item>
+    </string-array>
+    <string-array name="page_dscriptions_list">
+        <item>@string/page_one_desc_text</item>
+        <item>@string/page_two_desc_text</item>
+        <item>@string/page_three_desc_text</item>
+    </string-array>
 </resources>

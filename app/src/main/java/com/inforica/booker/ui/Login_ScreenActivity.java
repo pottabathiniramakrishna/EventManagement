@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.inforica.booker.R;
+import com.inforica.booker.service.SignInAsyncTask;
 
 
 /**
@@ -16,7 +17,7 @@ import com.inforica.booker.R;
 public class Login_ScreenActivity extends Activity implements View.OnClickListener {
     TextView whatsthis;
     Button sign_in;
-
+    SignInAsyncTask signInAsyncTask;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +36,8 @@ public class Login_ScreenActivity extends Activity implements View.OnClickListen
                 startActivity(i);
                 break;
             case R.id.sign_in:
-                Intent intent = new Intent(Login_ScreenActivity.this, CalenderPickerListActivity.class);
-                startActivity(intent);
+                signInAsyncTask=  new SignInAsyncTask(Login_ScreenActivity.this);
+                signInAsyncTask.execute();
                 break;
         }
     }

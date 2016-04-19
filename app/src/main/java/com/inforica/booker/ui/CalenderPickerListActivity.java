@@ -21,17 +21,18 @@ public class CalenderPickerListActivity extends Activity {
     private RecyclerView.Adapter mAdapter;
     ArrayList<String> calenderviewlist;
     CalenderPickerListAsyncTask calender_Picker_List_AsyncTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calender_picker_list_activity);
-        calenderRecyclerView = (RecyclerView)findViewById(R.id.calenders_list);
+        calenderRecyclerView = (RecyclerView) findViewById(R.id.calenders_list);
         mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         calenderRecyclerView.setLayoutManager(mLayoutManager);
         /*mAdapter = new CalenderPickerRecyclerAdapter(this,calenderviewlist);
         calenderRecyclerView.setAdapter(mAdapter);*/
-        calender_Picker_List_AsyncTask=  new CalenderPickerListAsyncTask();
+        calender_Picker_List_AsyncTask = new CalenderPickerListAsyncTask(CalenderPickerListActivity.this, calenderRecyclerView);
         calender_Picker_List_AsyncTask.execute();
     }
 }

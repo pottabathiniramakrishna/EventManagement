@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/progress_lg_w01" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w02" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w03" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w04" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w05" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w06" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w07" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w08" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w09" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w10" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w11" android:duration="150" />
+    <item android:drawable="@drawable/progress_lg_w12" android:duration="150" />
+</animation-list>

@@ -28,6 +28,8 @@ public class SplashScreenActivity extends Activity {
                 // This method will be executed once the timer is over
                 // Start your app main activity
                 Intent i = new Intent(SplashScreenActivity.this, Login_ScreenActivity.class);
+//                Intent i = new Intent(SplashScreenActivity.this, StartUpPageInstructionsActivity.class);
+
                 startActivity(i);
 
                 // close this activity
