@@ -2,6 +2,7 @@ package com.inforica.booker.ui;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -38,7 +39,7 @@ public class StartUpPageInstructionsActivity extends Activity {
     ViewPager mViewPager;
     ImageView imageView, done;
     TextView page_title, page_description;
-
+    private int focusedPage = 0;
     private Runnable animateViewPager;
     private static final long ANIM_VIEWPAGER_DELAY = 3000;
     private static final long ANIM_VIEWPAGER_DELAY_USER_VIEW = 1000;
@@ -55,6 +56,9 @@ public class StartUpPageInstructionsActivity extends Activity {
         setContentView(R.layout.startup_page_instructions_activity);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        done = (ImageView) findViewById(R.id.done);
+        child_frame_LinearLayout = (LinearLayout) findViewById(R.id.child_drawer_frame);
+
         mCustomPagerAdapter = new CustomPagerAdapter(this);
         mResourceTitles = getResources().getStringArray(R.array.page_titles_list);
         mResourceDescs = getResources().getStringArray(R.array.page_dscriptions_list);
@@ -62,8 +66,7 @@ public class StartUpPageInstructionsActivity extends Activity {
         mViewPager.setAdapter(mCustomPagerAdapter);
         mIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
         mIndicator.setViewPager(mViewPager);
-        done = (ImageView) findViewById(R.id.done);
-        child_frame_LinearLayout = (LinearLayout) findViewById(R.id.child_drawer_frame);
+
 
         mViewPager.setOnTouchListener(new View.OnTouchListener() {
 
@@ -94,8 +97,36 @@ public class StartUpPageInstructionsActivity extends Activity {
                 return false;
             }
         });
+        mViewPager.addOnPageChangeListener(new MyPageChangeListener());
     }
 
+    private class MyPageChangeListener extends ViewPager.SimpleOnPageChangeListener {
+        @Override
+        public void onPageSelected(int position) {
+            focusedPage = position;
+            Log.v("focusedPage", "" + focusedPage);
+
+            if (focusedPage == 2) {
+                done.setVisibility(View.VISIBLE);
+                child_frame_LinearLayout.setVisibility(View.GONE);
+                done.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent i = new Intent(StartUpPageInstructionsActivity.this, Login_ScreenActivity.class);
+
+                        startActivity(i);
+                        finish();
+                    }
+                });
+            }else{
+                done.setVisibility(View.GONE);
+                child_frame_LinearLayout.setVisibility(View.VISIBLE);
+            }
+
+        }
+
+    }
     class CustomPagerAdapter extends PagerAdapter {
 
         Context mContext;
@@ -119,20 +150,25 @@ public class StartUpPageInstructionsActivity extends Activity {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            View itemView = mLayoutInflater.inflate(R.layout.startuppager_item, container, false);
+           final View itemView = mLayoutInflater.inflate(R.layout.startuppager_item, container, false);
 
             page_title = (TextView) itemView.findViewById(R.id.page_title);
             page_description = (TextView) itemView.findViewById(R.id.page_description);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
+
             imageView.setImageResource(mResources[position]);
             page_title.setText(mResourceTitles[position]);
             page_description.setText(mResourceDescs[position]);
+            Log.v("TAG", "position" + position);
+            Log.v("TAG", "position" + mResourceTitles[position]);
+       /*     if (mResourceTitles[position].equals(getResources().getString(R.string.page_three_title_text))) {
+                Log.v("TAG", "position" + position);
 
+            } else {
+
+            }*/
             container.addView(itemView);
-            if (mResources[position] == 3) {
-                done.setVisibility(View.VISIBLE);
-//                mIndicator.set
-            }
+
 
             return itemView;
         }
@@ -141,6 +177,8 @@ public class StartUpPageInstructionsActivity extends Activity {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((LinearLayout) object);
         }
+
+
     }
 
 
