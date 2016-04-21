@@ -3,9 +3,9 @@ package com.inforica.booker.service;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.widget.RecyclerView;
 
-import com.inforica.booker.ui.CalenderPickerListActivity;
+import com.inforica.booker.ui.CalenderPickerListViewActivity;
+import com.inforica.booker.ui.CalenderPickerRecyclerViewActivity;
 import com.inforica.booker.utils.MyCustomProgressDialog;
 
 /**
@@ -46,7 +46,7 @@ public class SignInAsyncTask extends AsyncTask {
         super.onPostExecute(o);
         if (routeProgressDialog != null && routeProgressDialog.isShowing()) {
             routeProgressDialog.dismiss();
-            Intent intent = new Intent(mActivity, CalenderPickerListActivity.class);
+            Intent intent = new Intent(mActivity,CalenderPickerListViewActivity.class);
             mActivity.startActivity(intent);
         }
     }

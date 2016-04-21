@@ -20,8 +20,7 @@
             android:layout_marginTop="@dimen/margin_10dp"
             android:textColor="@color/text_black"
             android:textSize="@dimen/LargeFont"
-            android:textStyle="bold"
-            atts:fontName="@string/fnt_OpenSans_Regular" />
+            atts:fontName="@string/fnt_OpenSans_bold" />
 
         <com.inforica.booker.utils.CustomTextView
             android:id="@+id/description"
@@ -33,9 +32,9 @@
             atts:fontName="@string/fnt_OpenSans_Regular" />
     </LinearLayout>
 
-    <View
+   <!-- <View
         android:layout_width="fill_parent"
         android:layout_height="@dimen/divider_line_margin"
         android:layout_alignParentBottom="true"
-        android:background="@color/text_disabled" />
+        android:background="@color/text_disabled" />-->
 </LinearLayout>

@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by user on 4/18/2016.
  */
-public class CalenderPickerListAsyncTask extends AsyncTask {
+public class CalenderPickerRecyclerViewAsyncTask extends AsyncTask {
     JSONObject reader, jsonObj;
     JSONArray jsonArray;
     List<NameValuePair> postDataParams;
@@ -36,7 +36,7 @@ public class CalenderPickerListAsyncTask extends AsyncTask {
     String Calender_Url, json;
     JSONParser jsonParser;
 
-    public CalenderPickerListAsyncTask(Activity mActivity, RecyclerView mRecyclerView, String Calender_Url) {
+    public CalenderPickerRecyclerViewAsyncTask(Activity mActivity, RecyclerView mRecyclerView, String Calender_Url) {
         this.mActivity = mActivity;
         this.mRecyclerView = mRecyclerView;
         this.Calender_Url = Calender_Url;
