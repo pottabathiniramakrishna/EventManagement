@@ -36,7 +36,7 @@ public class CalenderPickerListActivity extends Activity {
         mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         calenderRecyclerView.setLayoutManager(mLayoutManager);
-        calenderRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
+      //  calenderRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
 
         Url= ServiceConstants.URL_CalenderListView;
         /*mAdapter = new CalenderPickerRecyclerAdapter(this,calenderviewlist);
@@ -45,29 +45,4 @@ public class CalenderPickerListActivity extends Activity {
         calender_Picker_List_AsyncTask.execute();
     }
 }
-class SimpleDividerItemDecoration extends RecyclerView.ItemDecoration{
-    private Drawable mDivider;
 
-    public SimpleDividerItemDecoration(Resources resources) {
-        mDivider = resources.getDrawable(R.drawable.line_divider);
-    }
-
-    public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
-        int left = parent.getPaddingLeft();
-        int right = parent.getWidth() - parent.getPaddingRight();
-
-        int childCount = parent.getChildCount();
-        for (int i = 0; i < childCount; i++) {
-            View child = parent.getChildAt(i);
-
-            RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
-
-            int top = child.getBottom() + params.bottomMargin;
-            int bottom = top + mDivider.getIntrinsicHeight();
-            //   int bottom =  mDivider.getIntrinsicHeight();
-
-            mDivider.setBounds(left, top, right, bottom);
-            mDivider.draw(c);
-        }
-    }
-}

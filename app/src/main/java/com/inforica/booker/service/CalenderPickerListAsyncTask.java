@@ -23,7 +23,7 @@ import java.util.List;
  * Created by user on 4/18/2016.
  */
 public class CalenderPickerListAsyncTask extends AsyncTask {
-    JSONObject reader,jsonObj;
+    JSONObject reader, jsonObj;
     JSONArray jsonArray;
     List<NameValuePair> postDataParams;
     String status = "";
@@ -31,7 +31,8 @@ public class CalenderPickerListAsyncTask extends AsyncTask {
     Activity mActivity;
     RecyclerView mRecyclerView;
     CalenderPickerRecyclerAdapter calenderPickerRecyclerAdapter;
-    ArrayList<CalenderPickerServiceResponce> calenderviewlist= new ArrayList<CalenderPickerServiceResponce>();;
+    ArrayList<CalenderPickerServiceResponce> calenderviewlist = new ArrayList<CalenderPickerServiceResponce>();
+    ;
     String Calender_Url, json;
     JSONParser jsonParser;
 
@@ -52,10 +53,6 @@ public class CalenderPickerListAsyncTask extends AsyncTask {
         try {
             jsonParser = new JSONParser();
             json = jsonParser.makeServiceCall(Calender_Url, HttpMethods.POST);
-            Log.v("Tag", "reader" + json);
-            Log.v("Tag", "Calender_Url" + Calender_Url);
-
-//            reader = JSONParser.makeHttpRequest(ServiceConstants.URL_LOCATION, HttpMethods.GET, postDataParams);
 
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -94,13 +91,12 @@ public class CalenderPickerListAsyncTask extends AsyncTask {
                     JSONObject c = jsonArray.getJSONObject(i);
                     CalenderPickerServiceResponce calenderPickerServiceResponce = new CalenderPickerServiceResponce();
                     calenderPickerServiceResponce.setCalender_name(c.getString("name").toString());
-                    //    Log.v("Tag", "name" + name);
                     calenderPickerServiceResponce.setCalender_desc(c.getString("country").toString());
-                    Log.v("Tag", "country" + c.getString("country").toString());
+                    //      Log.v("Tag", "country" + c.getString("country").toString());
                     calenderviewlist.add(calenderPickerServiceResponce);
 
-                    Log.v("Tag", "list" + calenderviewlist.size());
-                    Log.v("Tag", "list" + calenderviewlist.get(0).getCalender_name());
+                    //      Log.v("Tag", "list" + calenderviewlist.size());
+                    //    Log.v("Tag", "list" + calenderviewlist.get(0).getCalender_name());
 
                 }
             } catch (JSONException e) {

@@ -208,13 +208,13 @@ public class JSONParser {
 
             if (method == "POST") {
                 HttpPost httpPost = new HttpPost(url);
-                Log.v("Tag","Url"+url);
+
                 if (params != null) {
                     httpPost.setEntity(new UrlEncodedFormEntity(params));
                 }
 
                 httpResponse = httpClient.execute(httpPost);
-                Log.v("Tag","Url"+httpResponse);
+
 
             } else if (method == "GET") {
 
