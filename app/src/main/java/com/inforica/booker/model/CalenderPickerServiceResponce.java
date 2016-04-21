@@ -7,6 +7,12 @@ public class CalenderPickerServiceResponce {
     String calender_name;
     String calender_desc;
 
+    public CalenderPickerServiceResponce( ) {
+        super();
+       /* this.calender_name=calender_name;
+        this.calender_desc=calender_desc;*/
+    }
+
     public String getCalender_desc() {
         return calender_desc;
     }
