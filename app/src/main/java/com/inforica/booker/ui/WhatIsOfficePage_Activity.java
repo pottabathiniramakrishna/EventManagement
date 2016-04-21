@@ -8,12 +8,13 @@ import android.widget.Button;
 
 import com.andexert.library.RippleView;
 import com.inforica.booker.R;
+import com.inforica.booker.utils.SuperclassActivity;
 
 
 /**
  * Created by user on 4/14/2016.
  */
-public class WhatIsOfficePage_Activity extends Activity implements View.OnClickListener {
+public class WhatIsOfficePage_Activity extends SuperclassActivity implements View.OnClickListener {
     //    LinearLayout back_button;
     RippleView back_button;
 

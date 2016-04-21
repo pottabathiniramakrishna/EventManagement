@@ -58,12 +58,17 @@
                 atts:fontName="@string/fnt_OpenSans_Regular" />
 
             <com.inforica.booker.utils.MyEditText
+                android:id="@+id/email_text"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginLeft="@dimen/margin_20dp"
                 android:layout_marginRight="@dimen/margin_20dp"
                 android:layout_marginTop="@dimen/margin_50dp"
                 android:gravity="left"
+                android:cursorVisible="true"
+                android:ellipsize="start"
+                android:inputType="textEmailAddress"
+                android:maxLength="75"
                 android:hint="@string/example_mail"
                 android:paddingLeft="@dimen/margin_5dp"
                 android:singleLine="true"

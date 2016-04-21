@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import com.inforica.booker.R;
 import com.inforica.booker.adapter.CalenderPickerRecyclerAdapter;
 import com.inforica.booker.service.CalenderPickerListAsyncTask;
+import com.inforica.booker.utils.SuperclassActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by user on 4/18/2016.
  */
-public class CalenderPickerListActivity extends Activity {
+public class CalenderPickerListActivity extends SuperclassActivity {
     private RecyclerView calenderRecyclerView;
     LinearLayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;

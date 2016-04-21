@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.inforica.booker.R;
+import com.inforica.booker.utils.SuperclassActivity;
 import com.inforica.booker.viewpager.CirclePageIndicator;
 import com.inforica.booker.viewpager.CustomPagerAdapter;
 import com.inforica.booker.viewpager.PageIndicator;
@@ -27,7 +28,7 @@ import com.inforica.booker.viewpager.PageIndicator;
 /**
  * Created by user on 4/19/2016.
  */
-public class StartUpPageInstructionsActivity extends Activity {
+public class StartUpPageInstructionsActivity extends SuperclassActivity {
     static int[] mResources = {
             R.drawable.whitelogo,
             R.drawable.whitelogo,
