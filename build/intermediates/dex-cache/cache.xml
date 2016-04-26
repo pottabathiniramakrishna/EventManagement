@@ -1,3 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2f417d93e1f62fd4fb4a2c0f3a4a882dd0ca7843">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.0.0-alpha2_c36367ac26993fbcd12de0f1fa63e86d01774db0.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.3\56498efd17752898cfcc3868c1b6211a07b12b8f\joda-time-2.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="56498efd17752898cfcc3868c1b6211a07b12b8f">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\joda-time-2.3_ceffb9d2ff439430d8c587767e891fdf46279814.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\glide-3.7.0_56487dcc601537ec955eea625d9774ba24b2cff3.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\libs\internal_impl-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0-alpha2_bcff5ba7dc975da56def3f31d51525c348623d92.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\EventManagement\CollapseCalendarView\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="25b49b15552ca2af63501b29cbbc04b42c6a8d90">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\EventManagement-CollapseCalendarView-unspecified_de383ab057dbfcb865600d2dbd508724967a23c7.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0-alpha2_85c24ca9a8c55ff70e60a69100a3e7f41a02dd43.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_0b5cf5485e941405338c98e6f2b654324e229164.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_5f765cd25a747965446dc86cbce8867c20e02f4d.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\EventManagement\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ab31e71ca1f2024d10489c84473d9fbae486d5db">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\EventManagement-library-unspecified_bcb20f482d689e2ca64aa414f395ce267d778563.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha2\support-annotations-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha2_2a7fc70baa94256cf5042fd7f818b89b15029a2a.jar" />
+    </item>
+    <item
+        jar="D:\Inforica\EventManagement\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_89146290b36a35901a790596a556eb4bd19bd1cb.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="D:\Inforica\EventManagement\app\build\intermediates\pre-dexed\debug\commons-lang3-3.3.2_319f651f1817a36743f9735e8c1fa1cbddc880bc.jar" />
+    </item>
+
+</items>

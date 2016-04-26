@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.inforica.booker.R;
 import com.inforica.booker.model.CalenderPickerServiceResponce;
+import com.inforica.booker.ui.CalenderAgendaViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +22,12 @@ import java.util.List;
  * Created by user on 4/18/2016.
  */
 public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    Activity mContext;
+    Activity mActivity;
     //    ArrayList<String> contact_names;
     ArrayList<CalenderPickerServiceResponce> calenderviewlist;
 
     public CalenderPickerRecyclerAdapter(Activity mContext, ArrayList<CalenderPickerServiceResponce> calenderviewlist) {
-        this.mContext = mContext;
+        this.mActivity = mContext;
         this.calenderviewlist = calenderviewlist;
     }
 
@@ -44,6 +45,9 @@ public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<Recycler
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent calender_agenda_intent = new Intent(mActivity, CalenderAgendaViewActivity.class);
+                    calender_agenda_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    mActivity.startActivity(calender_agenda_intent);
                 }
             });
 
@@ -64,15 +68,17 @@ public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<Recycler
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         if (holder instanceof CalenderlistViewHolder) {
-            CalenderlistViewHolder contact_view_holder = (CalenderlistViewHolder) holder;
-            contact_view_holder.title.setText(calenderviewlist.get(position).getCalender_name());
-            contact_view_holder.description.setText(calenderviewlist.get(position).getCalender_desc());
+            CalenderlistViewHolder calender_view_holder = (CalenderlistViewHolder) holder;
+            calender_view_holder.title.setText(calenderviewlist.get(position).getCalender_name());
+            calender_view_holder.description.setText(calenderviewlist.get(position).getCalender_desc());
 //            dataitems.get calenderviewlist.get(position);
         }
     }
 
     @Override
     public int getItemCount() {
+        Log.v("Tag", "list_size_in adapter" + calenderviewlist.size());
+
         return calenderviewlist.size();
     }
 }

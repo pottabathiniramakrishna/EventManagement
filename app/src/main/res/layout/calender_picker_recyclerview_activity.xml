@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:atts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_black">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:text="CHOOSE A MAILBOX"
+                android:textAlignment="center"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/margin_20dp"
+                atts:fontName="@string/fnt_OpenSans_Regular" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/calender_recycler_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+    </LinearLayout>
+</LinearLayout>
