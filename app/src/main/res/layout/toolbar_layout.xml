@@ -36,7 +36,7 @@
                   android:src="@mipmap/ic_launcher"
                   android:visibility="gone" />&ndash;&gt;-->
 
-            <com.inforica.booker.utils.CustomTextView
+            <com.inforica.booker.views.CustomTextView
                 android:id="@+id/screen_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

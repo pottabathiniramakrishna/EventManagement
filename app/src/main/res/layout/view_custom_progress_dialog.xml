@@ -15,7 +15,7 @@
         android:background="@null"
         android:scaleType="centerCrop" />
 
-    <com.inforica.booker.utils.CustomTextView
+    <com.inforica.booker.views.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -25,4 +25,13 @@
     <dimen name="MediumFont">14sp</dimen>
     <dimen name="SmallFont">12sp</dimen>
     <dimen name="VerySmallFont">10sp</dimen>
+
+
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+
+    <!-- Line Indicator -->
+    <dimen name="default_line_indicator_line_width">12dp</dimen>
+    <dimen name="default_line_indicator_gap_width">4dp</dimen>
+    <dimen name="default_line_indicator_stroke_width">1dp</dimen>
 </resources>

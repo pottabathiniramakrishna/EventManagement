@@ -24,13 +24,13 @@
         android:orientation="vertical">
 
 
-        <com.inforica.booker.viewpager.CirclePageIndicator
+        <com.inforica.booker.views.viewpager.CirclePageIndicator
             android:id="@+id/indicator"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/pager"
             android:padding="@dimen/margin_10dp"
-            app:radius="@dimen/margin_10dp"></com.inforica.booker.viewpager.CirclePageIndicator>
+            app:radius="@dimen/margin_10dp"></com.inforica.booker.views.viewpager.CirclePageIndicator>
 
 
     </LinearLayout>

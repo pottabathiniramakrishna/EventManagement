@@ -22,4 +22,12 @@
     <color name="page_inactive">#80FFFFFF</color>
     <color name="semi_white">#B3FFFFFF</color>
     <color name="Text_dark">#8A000000</color>
+
+
+    <color name="default_circle_indicator_fill_color">#FFFF0000</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="default_line_indicator_selected_color">#FF33B5E5</color>
+    <color name="default_line_indicator_unselected_color">#FFBBBBBB</color>
+    <color name="default_underline_indicator_selected_color">#FF33B5E5</color>
 </resources>

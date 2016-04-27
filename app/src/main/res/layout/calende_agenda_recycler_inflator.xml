@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.inforica.booker.utils.CustomTextView
+            <com.inforica.booker.views.CustomTextView
                 android:id="@+id/start_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
                 android:textSize="@dimen/MediumFont"
                 atts:fontName="@string/fnt_OpenSans_bold" />
 
-            <com.inforica.booker.utils.CustomTextView
+            <com.inforica.booker.views.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10dp"
@@ -35,7 +35,7 @@
                 android:textSize="@dimen/MediumFont"
                 atts:fontName="@string/fnt_OpenSans_bold" />
 
-            <com.inforica.booker.utils.CustomTextView
+            <com.inforica.booker.views.CustomTextView
                 android:id="@+id/end_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                 atts:fontName="@string/fnt_OpenSans_bold" />
         </LinearLayout>
 
-        <com.inforica.booker.utils.CustomTextView
+        <com.inforica.booker.views.CustomTextView
             android:id="@+id/service_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
             android:textSize="@dimen/veryExtralargeFont"
             atts:fontName="@string/fnt_OpenSans_Regular" />
 
-        <com.inforica.booker.utils.CustomTextView
+        <com.inforica.booker.views.CustomTextView
             android:id="@+id/customer_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             android:textSize="@dimen/LargeFont"
             atts:fontName="@string/fnt_OpenSans_semi_bold" />
 
-        <com.inforica.booker.utils.CustomTextView
+        <com.inforica.booker.views.CustomTextView
             android:id="@+id/service_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

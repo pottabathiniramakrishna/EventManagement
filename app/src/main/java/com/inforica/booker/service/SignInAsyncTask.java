@@ -4,9 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 
-import com.inforica.booker.ui.CalenderPickerListViewActivity;
-import com.inforica.booker.ui.CalenderPickerRecyclerViewActivity;
-import com.inforica.booker.utils.MyCustomProgressDialog;
+import com.inforica.booker.activities.CalenderPickerRecyclerViewActivity;
+import com.inforica.booker.views.MyCustomProgressDialog;
 
 /**
  * Created by user on 4/18/2016.
