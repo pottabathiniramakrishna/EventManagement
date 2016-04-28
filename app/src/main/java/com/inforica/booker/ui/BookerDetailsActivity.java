@@ -6,7 +6,9 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -24,7 +26,9 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -57,8 +61,7 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
     private static final String TAG = "LocationActivity";
     private static final long INTERVAL = 1000 * 10;
     private static final long FASTEST_INTERVAL = 1000 * 5;
-    Button btnFusedLocation;
-    TextView tvLocation;
+    TextView edit_button;
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
     TextView screen_name;
@@ -67,6 +70,7 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
     GoogleMap googleMap;
     LatLng currentlocation;
     Marker currentlocmarker;
+    ImageView back_button;
 
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
@@ -89,6 +93,7 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.booker_details_activity);
         if (googleMap == null) {
             // Try to obtain the map from the SupportMapFragment.
@@ -109,7 +114,14 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
         }
         screen_name = (TextView) findViewById(R.id.screen_name);
         screen_name.setText("BOOKING DETAILS");
+        edit_button = (TextView) findViewById(R.id.edit_button);
+        edit_button.setVisibility(View.VISIBLE);
+        back_button = (ImageView) findViewById(R.id.back_button);
+        back_button.setVisibility(View.VISIBLE);
+        back_button.setOnClickListener(this);
+
     }
+
 
     @Override
     public void onStart() {
@@ -192,6 +204,11 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.back_button:
+                onBackPressed();
+                break;
+        }
 
     }
 

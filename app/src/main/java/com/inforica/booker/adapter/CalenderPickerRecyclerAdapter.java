@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.inforica.booker.R;
@@ -16,14 +14,12 @@ import com.inforica.booker.model.CalenderPickerServiceResponce;
 import com.inforica.booker.ui.CalenderAgendaViewActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by user on 4/18/2016.
  */
 public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Activity mActivity;
-    //    ArrayList<String> contact_names;
     ArrayList<CalenderPickerServiceResponce> calenderviewlist;
 
     public CalenderPickerRecyclerAdapter(Activity mContext, ArrayList<CalenderPickerServiceResponce> calenderviewlist) {
@@ -58,7 +54,7 @@ public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<Recycler
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         // create a new view
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.calender_picker_list_inflator, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.calender_picker_recycler_inflator, parent, false);
         // set the view's size, margins, paddings and layout parameters
         CalenderlistViewHolder vh = new CalenderlistViewHolder(v);
         return vh;

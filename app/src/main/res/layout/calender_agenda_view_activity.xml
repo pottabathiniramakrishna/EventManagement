@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:atts="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/text_white">
@@ -14,14 +15,37 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/toolbar_layout" />
+            <!--<include layout="@layout/toolbar_layout" />-->
+        </LinearLayout>
+
+
+        <com.wefika.calendar.CollapseCalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30dp"
+            android:alpha="0.5"
+            android:background="@color/description_color">
+
+            <com.inforica.booker.utils.CustomTextView
+                android:id="@+id/current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/MediumFont"
+                atts:fontName="@string/fnt_OpenSans_semi_bold" />
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/calender_agenda_view_list"
+            android:id="@+id/calender_agenda_recycler_view"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            ></android.support.v7.widget.RecyclerView>
-
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
     </LinearLayout>
 </LinearLayout>
