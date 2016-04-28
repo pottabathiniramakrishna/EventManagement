@@ -54,6 +54,8 @@ public class CalenderAgendaRecyclerAdapter extends RecyclerView.Adapter<Recycler
                     booikng_details_intent.putExtra("Customer_Name", calenderagendaviewlist.get(getPosition()).getCustomer_name());
                     booikng_details_intent.putExtra("Start_Time", calenderagendaviewlist.get(getPosition()).getStart_time());
                     booikng_details_intent.putExtra("End_Time", calenderagendaviewlist.get(getPosition()).getEnd_time());
+                    booikng_details_intent.putExtra("Service_Name", calenderagendaviewlist.get(getPosition()).getService_name());
+                    booikng_details_intent.putExtra("Service_Location", calenderagendaviewlist.get(getPosition()).getService_location());
 //                    booikng_details_intent.putExtra("Customer_Name",calenderagendaviewlist.get(getAdapterPosition()).getCustomer_name());
                     booikng_details_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mActivity.startActivity(booikng_details_intent);

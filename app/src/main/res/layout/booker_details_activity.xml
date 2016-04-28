@@ -166,6 +166,7 @@
                             android:orientation="vertical">
 
                             <com.inforica.booker.utils.CustomTextView
+                                android:id="@+id/customer_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/customer_name"

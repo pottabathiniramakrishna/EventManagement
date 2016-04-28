@@ -1,6 +1,7 @@
 package com.inforica.booker.ui;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -71,6 +72,9 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
     LatLng currentlocation;
     Marker currentlocmarker;
     ImageView back_button;
+    TextView service_name, service_location, date, start_time, end_time, customer_name, customer_desc, booking_notes, price, days_before, mail_desc, staff_name;
+    String StartTime, EndTime, CustomerName, StaffName, Service_Location, Service_Name;
+    ImageView staffImage;
 
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
@@ -119,6 +123,56 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
         back_button = (ImageView) findViewById(R.id.back_button);
         back_button.setVisibility(View.VISIBLE);
         back_button.setOnClickListener(this);
+
+
+        date = (TextView) findViewById(R.id.date);
+        start_time = (TextView) findViewById(R.id.start_time);
+        end_time = (TextView) findViewById(R.id.end_time);
+        customer_name = (TextView) findViewById(R.id.customer_name);
+        service_name = (TextView) findViewById(R.id.service_name);
+        service_location = (TextView) findViewById(R.id.service_location);
+   /*     customer_desc = (TextView) findViewById(R.id.customer_desc);
+        booking_notes = (TextView) findViewById(R.id.bookinf_notes);
+        price = (TextView) findViewById(R.id.price);
+        days_before = (TextView) findViewById(R.id.days_before);
+        mail_desc = (TextView) findViewById(R.id.mail_desc);
+        staff_name = (TextView) findViewById(R.id.staff_Name);*/
+        staffImage = (ImageView) findViewById(R.id.staff_image);
+
+        Intent intent = getIntent();
+        StartTime = intent.getExtras().getString("Start_Time");
+        EndTime = intent.getExtras().getString("End_Time");
+        CustomerName = intent.getExtras().getString("Customer_Name");
+
+        Service_Name = intent.getExtras().getString("Service_Name");
+        Service_Location = intent.getExtras().getString("Service_Location");
+//        StaffName = intent.getExtras().getString("staff_Name");
+
+
+    /*    String Staffname = "";
+        Staffname = Staffname + StaffName.charAt(0);
+        for (int i = 0; i < StaffName.length(); i++) {
+            if (Character.isWhitespace(StaffName.charAt(i))) {
+                Staffname = Staffname + StaffName.charAt(i + 1);
+            }
+        }
+        Log.v("Tag", "FN" + Staffname);*/
+        //    String firstLetter = String.valueOf(calenderAgendaviewlist.get(position).getStaff_name().charAt(0));
+/*        ColorGenerator generator = ColorGenerator.MATERIAL; // or use DEFAULT
+        // generate random color
+        //  int color = generator.getColor(calenderAgendaviewlist.get(position));
+        int color = generator.getRandomColor();
+
+        TextDrawable drawable = TextDrawable.builder()
+                .buildRound(Staffname, color); // radius in px
+
+        staffImage.setImageDrawable(drawable);*/
+        start_time.setText(StartTime);
+        end_time.setText(EndTime);
+        customer_name.setText(CustomerName);
+//        staff_name.setText(StaffName);
+        service_name.setText(Service_Name);
+        service_location.setText(Service_Location);
 
     }
 
