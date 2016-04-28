@@ -33,5 +33,9 @@
     <string name="fnt_OpenSans_Regular">OpenSans-Regular.ttf</string>
     <string name="fnt_OpenSans_semi_bold">OpenSans-Semibold.ttf</string>
 
-
+    <style name="ToolbarCustomIconColor" parent="AppTheme">
+        <!-- android:textColorSecondary is used for coloring the navigation drawer icon and up arrow. &ndash;&gt;-->
+        <item name="android:textColorSecondary">@color/text_white</item>
+        <item name="android:textColorPrimary">@color/text_white</item>
+    </style>
 </resources>

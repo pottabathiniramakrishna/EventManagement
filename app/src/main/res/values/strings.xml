@@ -2,6 +2,10 @@
     <string name="app_name">BookerApplication</string>
     <string name="action_settings">Settings</string>
 
+    <!--ToolBar strings-->
+
+    <string name="edit">Edit</string>
+
 
     <!--Login Screen Strings-->
 
@@ -18,6 +22,25 @@
     <string name="instruction_one">Your email address is the same account\nyou use to sign in to your email at work.</string>
     <string name="instruction_two">Other email accounts,such as\nGmail,Yahoo and Outlook.com aren\'t\nsupported yet.</string>
     <string name="back">BACK</string>
+
+    <!--Booking Details Activity-->
+
+    <string name="service_name">Service name</string>
+    <string name="service_location">Service location</string>
+    <string name="service_date">Service date</string>
+    <string name="service_start_time">Start time</string>
+    <string name="service_end_time">End time</string>
+    <string name="customer_name">Customer name</string>
+    <string name="booking_notes">Booking notes</string>
+    <string name="price">Price</string>
+    <string name="email_reminder">Email reminder</string>
+    <string name="reminder_to_customer">Reminder to customer</string>
+    <string name="one_day_before">1 day before</string>
+    <string name="assigned_staff">Assigned staff</string>
+    <string name="cancel_booking">Cancel booking</string>
+    <string name="description">Description</string>
+    <string name="staff_name">Staff name</string>
+
 
     <!--startup pages textview strings-->
     <string name="page_one_title_text">Always up to date</string>
