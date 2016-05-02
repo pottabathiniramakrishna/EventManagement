@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:atts="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/margin_10dp"
+    android:paddingRight="@dimen/margin_10dp"
+    android:paddingTop="@dimen/margin_10dp"
+    android:paddingBottom="@dimen/margin_20dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+
+    <com.inforica.booker.views.CustomTextView
+        android:id="@+id/navigationdrawer_email_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="Title Text"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/LargeFont"
+        atts:fontName="@string/fnt_OpenSans_Regular" />
+
+    <com.inforica.booker.views.CustomTextView
+        android:id="@+id/navigationdrawer_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="Title Text"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/SmallFont"
+        atts:fontName="@string/fnt_OpenSans_Regular" />
+
+</LinearLayout>
