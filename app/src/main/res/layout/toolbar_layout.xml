@@ -1,80 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     xmlns:atts="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/text_black"
+    android:minHeight="?attr/actionBarSize"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/custom_toolbar"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/text_black"
-        android:minHeight="?attr/actionBarSize">
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <!--  <ImageView
+         app:theme="@style/ToolbarCustomIconColor"
+              android:id="@+id/app_main_icon"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_gravity="center"
+              android:layout_marginLeft="10dp"
+              android:src="@drawable/ic_icon_white_24dp" />
+
+         &lt;!&ndash; <ImageView
+              android:id="@+id/back_button"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:layout_gravity="center"
+              android:layout_marginLeft="10dp"
+              android:src="@mipmap/ic_launcher"
+              android:visibility="gone" />&ndash;&gt;-->
+
+        <com.inforica.booker.views.CustomTextView
+            android:id="@+id/screen_name"
+            atts:fontName="@string/fnt_OpenSans_Regular"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:singleLine="true"
+            android:text="Title Text"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/veryExtralargeFont" />
 
-            <!--  <ImageView
-             app:theme="@style/ToolbarCustomIconColor"
-                  android:id="@+id/app_main_icon"
-                  android:layout_width="24dp"
-                  android:layout_height="24dp"
-                  android:layout_gravity="center"
-                  android:layout_marginLeft="10dp"
-                  android:src="@drawable/ic_icon_white_24dp" />
-
-             &lt;!&ndash; <ImageView
-                  android:id="@+id/back_button"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp"
-                  android:layout_gravity="center"
-                  android:layout_marginLeft="10dp"
-                  android:src="@mipmap/ic_launcher"
-                  android:visibility="gone" />&ndash;&gt;-->
-
-            <com.inforica.booker.views.CustomTextView
-                android:id="@+id/screen_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <!--    <ImageView
+                android:id="@+id/sync_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="Title Text"
-                android:textColor="@color/text_white"
-                android:textSize="@dimen/veryExtralargeFont"
-                atts:fontName="@string/fnt_OpenSans_Regular" />
+                android:layout_marginRight="10dp"
+                android:src="@drawable/refresh"
+                android:visibility="gone" />
 
-            <!--    <ImageView
-                    android:id="@+id/sync_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/refresh"
-                    android:visibility="gone" />
+            <ImageView
+                android:id="@+id/filter_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/filter" />
 
-                <ImageView
-                    android:id="@+id/filter_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/filter" />
+            <ImageView
+                android:id="@+id/add_group_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/add_white" />-->
+    </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/add_group_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/add_white" />-->
-        </LinearLayout>
+</android.support.v7.widget.Toolbar>
 
-    </android.support.v7.widget.Toolbar>
 
-</LinearLayout>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BookerApplication</string>
     <string name="action_settings">Settings</string>
-
+    <string name="title_home">Home</string>
 
     <!--Login Screen Strings-->
 
@@ -11,6 +11,7 @@
     <string name="example_mail">someone@example.com</string>
     <string name="sign_in">SIGN IN</string>
     <string name="signin_progress">Signing in...</string>
+    <string name="loading_data">Loading Data...</string>
 
     <!--What,s this  Screen Strings-->
 
@@ -27,6 +28,12 @@
     <string name="page_three_title_text">Schedule on the go</string>
     <string name="page_three_desc_text">Quickly make new bookings on\nthe move with the intuitive\nbooking assistant.</string>
 
+    <!--Navigation Items -->
+    <string name="nav_item_feedback">Give Feedback</string>
+    <string name="nav_item_suggest">Suggest a feature</string>
+    <string name="nav_item_logout">Logout</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 
     <string-array name="page_titles_list">
         <item>@string/page_one_title_text</item>
@@ -37,5 +44,12 @@
         <item>@string/page_one_desc_text</item>
         <item>@string/page_two_desc_text</item>
         <item>@string/page_three_desc_text</item>
+    </string-array>
+
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_feedback</item>
+        <item>@string/nav_item_feedback</item>
+        <item>@string/nav_item_suggest</item>
+        <item>@string/nav_item_logout</item>
     </string-array>
 </resources>

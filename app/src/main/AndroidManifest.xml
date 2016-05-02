@@ -2,34 +2,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.inforica.booker">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />   // optional but highly recommended
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/greenlogo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.SplashScreenActivity">
+        android:theme="@style/MyMaterialTheme">
+        <meta-data android:name="LOCALYTICS_APP_KEY" android:value="11de5b1ff5bfc2cb87ef6be-8e1aa644-0efc-11e6-6fc1-002dea3c3994"/>
+        <activity android:name=".activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                    <!--<data android:scheme="11de5b1ff5bfc2cb87ef6be-8e1aa644-0efc-11e6-6fc1-002dea3c3994" />-->
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.StartUpPageInstructionsActivity"
+            android:name=".activities.StartUpPageInstructions"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activities.Login_ScreenActivity"
+            android:name=".activities.LoginScreen"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activities.WhatIsOfficePage_Activity"
+            android:name=".activities.WhatIsOfficePage"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -52,6 +56,20 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.MainContent"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver
+            android:name="com.localytics.android.ReferralReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
