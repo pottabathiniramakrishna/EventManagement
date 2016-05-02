@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.inforica.booker.R;
 import com.inforica.booker.fragments.FragmentDrawer;
-import com.inforica.booker.fragments.CalenderPicker;
+import com.inforica.booker.fragments.HomeFragment;
 
 /**
  * Created by ranjith on 01-05-2016.
@@ -79,16 +79,16 @@ public class MainContent extends AppCompatActivity implements FragmentDrawer.Fra
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new CalenderPicker();
+                fragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new CalenderPicker();
+                fragment = new HomeFragment ();
                 break;
             case 2:
-                fragment = new CalenderPicker();
+                fragment = new HomeFragment();
                 break;
             case 3:
-                fragment = new CalenderPicker();
+                fragment = new HomeFragment ();
                 break;
 
             default:
