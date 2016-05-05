@@ -18,7 +18,7 @@ public class MyCustomProgressDialog extends ProgressDialog {
     private static MyCustomProgressDialog dialog;
     public TextView textView;
 
-    public static ProgressDialog ctor(Context context) {
+    public static MyCustomProgressDialog ctor(Context context) {
         dialog = new MyCustomProgressDialog(context);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.setIndeterminate(true);

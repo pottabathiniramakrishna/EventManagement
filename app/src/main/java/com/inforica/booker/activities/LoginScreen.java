@@ -12,15 +12,11 @@ import android.widget.TextView;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.inforica.booker.R;
 import com.inforica.booker.network.VolleyUtil;
 import com.inforica.booker.views.MyCustomProgressDialog;
 import com.localytics.android.Localytics;
-
-import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -195,7 +191,7 @@ public class LoginScreen extends SuperActivity implements View.OnClickListener {
     private void processResponse(String response) {
 
         if ("true".equalsIgnoreCase(response)) {
-            Intent intent = new Intent(this, CalenderPickerRecyclerViewActivity.class);
+            Intent intent = new Intent(this, MainContent.class);
             startActivity(intent);
             finish();
         } else if("false".equalsIgnoreCase(response)){

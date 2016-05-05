@@ -12,15 +12,12 @@ import android.view.ViewGroup;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.google.gson.Gson;
 import com.inforica.booker.R;
 import com.inforica.booker.model.CalenderPickerModel;
-import com.inforica.booker.network.CalenderPickerRecyclerViewAsyncTask;
+import com.inforica.booker.network.GsonRequest;
 import com.inforica.booker.network.VolleyUtil;
 import com.inforica.booker.views.MyCustomProgressDialog;
-
-import org.json.JSONArray;
+import com.inforica.booker.views.adapters.CalenderPickerRecyclerAdapter;
 
 /**
  * Created by ranjith on 01-05-2016.
@@ -32,7 +29,7 @@ public class CalenderPicker extends Fragment {
     private RecyclerView calenderRecyclerView;
     LinearLayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
-    CalenderPickerRecyclerViewAsyncTask calender_Picker_List_AsyncTask;
+    MyCustomProgressDialog routeProgressDialog;
 
     public CalenderPicker() {
         // Required empty public constructor
@@ -52,34 +49,36 @@ public class CalenderPicker extends Fragment {
         mLayoutManager = new LinearLayoutManager(getContext());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         calenderRecyclerView.setLayoutManager(mLayoutManager);
-        calender_Picker_List_AsyncTask = new CalenderPickerRecyclerViewAsyncTask(getActivity(), calenderRecyclerView);
-        calender_Picker_List_AsyncTask.execute();
+        routeProgressDialog =   MyCustomProgressDialog.ctor(getActivity());
+      /*  calender_Picker_List_AsyncTask = new CalenderPickerRecyclerViewAsyncTask(getActivity(), calenderRecyclerView);
+        calender_Picker_List_AsyncTask.execute();*/
         loadData();
         return rootView;
     }
 
     private void loadData() {
+        Log.d(TAG, "in load adata");
 
-
-        final MyCustomProgressDialog routeProgressDialog =  (MyCustomProgressDialog) MyCustomProgressDialog.ctor(getContext());
         String tag_json_obj = "json_calender";
         // used for debuging purpose
         String url = "http://vainavisolutions.com/clalenders.json";
+
         routeProgressDialog.show();
-        JsonArrayRequest calenderPickerReq = new JsonArrayRequest(url,
-                new Response.Listener<JSONArray>() {
+        routeProgressDialog.textView.setText("Loading Data");
+        GsonRequest<CalenderPickerModel[]> myGsonReq  = new GsonRequest<CalenderPickerModel[]>(url,CalenderPickerModel[].class,null,
+                new Response.Listener<CalenderPickerModel[]>() {
                     @Override
-                    public void onResponse(JSONArray response) {
+                    public void onResponse(CalenderPickerModel[] response) {
                         Log.d(TAG, response.toString());
 
-                        // Parsing json
-                        Gson gson = new Gson();
-                        CalenderPickerModel[] myTypes = gson.fromJson(response.toString(), CalenderPickerModel[].class);
-
-
+                        //populate Data
+                        CalenderPickerRecyclerAdapter calenderPickerRecyclerAdapter = new CalenderPickerRecyclerAdapter(getActivity(), response);
+                        Log.v("Tag", "list" + response);
+                        calenderRecyclerView.setAdapter(calenderPickerRecyclerAdapter);
+                        routeProgressDialog.dismiss();
                         // notifying list adapter about data changes
                         // so that it renders the list view with updated data
-                    //    adapter.notifyDataSetChanged();
+                        //    adapter.notifyDataSetChanged();
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -91,7 +90,7 @@ public class CalenderPicker extends Fragment {
         });
 
         // Adding request to request queue
-        VolleyUtil.getInstance().addToRequestQueue(calenderPickerReq, tag_json_obj);
+        VolleyUtil.getInstance().addToRequestQueue(myGsonReq, tag_json_obj);
     }
 
 

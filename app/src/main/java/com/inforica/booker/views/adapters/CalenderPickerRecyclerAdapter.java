@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.inforica.booker.R;
+import com.inforica.booker.model.CalenderPickerModel;
 import com.inforica.booker.model.CalenderPickerServiceResponce;
 import com.inforica.booker.activities.CalenderAgendaViewActivity;
 
@@ -21,9 +22,9 @@ import java.util.ArrayList;
 public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Activity mActivity;
     //    ArrayList<String> contact_names;
-    ArrayList<CalenderPickerServiceResponce> calenderviewlist;
+    CalenderPickerModel[] calenderviewlist;
 
-    public CalenderPickerRecyclerAdapter(Activity mContext, ArrayList<CalenderPickerServiceResponce> calenderviewlist) {
+    public CalenderPickerRecyclerAdapter(Activity mContext, CalenderPickerModel[] calenderviewlist) {
         this.mActivity = mContext;
         this.calenderviewlist = calenderviewlist;
     }
@@ -72,16 +73,16 @@ public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<Recycler
 
         if (holder instanceof CalenderlistViewHolder) {
             CalenderlistViewHolder calender_view_holder = (CalenderlistViewHolder) holder;
-            calender_view_holder.title.setText(calenderviewlist.get(position).getCalender_name());
-            calender_view_holder.description.setText(calenderviewlist.get(position).getCalender_desc());
+            calender_view_holder.title.setText(calenderviewlist[position].calender_name);
+            calender_view_holder.description.setText(calenderviewlist[position].calender_desc);
 //            dataitems.get calenderviewlist.get(position);
         }
     }
 
     @Override
     public int getItemCount() {
-        Log.v("Tag", "list_size_in adapter" + calenderviewlist.size());
+        Log.v("Tag", "list_size_in adapter" + calenderviewlist.length);
 
-        return calenderviewlist.size();
+        return calenderviewlist.length;
     }
 }

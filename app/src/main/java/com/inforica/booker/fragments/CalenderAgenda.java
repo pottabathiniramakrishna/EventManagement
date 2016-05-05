@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.inforica.booker.R;
-import com.inforica.booker.network.CalenderPickerRecyclerViewAsyncTask;
 
 /**
  * Created by ranjith on 01-05-2016.
@@ -25,7 +24,6 @@ public class CalenderAgenda extends Fragment {
     private RecyclerView calenderRecyclerView;
     LinearLayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
-    CalenderPickerRecyclerViewAsyncTask calender_Picker_List_AsyncTask;
 
     public CalenderAgenda() {
         // Required empty public constructor
@@ -40,13 +38,11 @@ public class CalenderAgenda extends Fragment {
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState) {
-        rootView = inflater.inflate (R.layout.calender_picker_recyclerview_activity, container, false);
-        calenderRecyclerView = (RecyclerView) rootView.findViewById(R.id.calender_recycler_list);
+        rootView = inflater.inflate (R.layout.calender_agenda_recyclerview, container, false);
+//        calenderRecyclerView = (RecyclerView) rootView.findViewById(R.id.calender_recycler_list);
         mLayoutManager = new LinearLayoutManager(getContext());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        calenderRecyclerView.setLayoutManager(mLayoutManager);
-        calender_Picker_List_AsyncTask = new CalenderPickerRecyclerViewAsyncTask(getActivity(), calenderRecyclerView);
-        calender_Picker_List_AsyncTask.execute();
+     //   calenderRecyclerView.setLayoutManager(mLayoutManager);
         return rootView;
     }
 
