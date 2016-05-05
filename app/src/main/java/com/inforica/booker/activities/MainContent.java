@@ -2,6 +2,7 @@ package com.inforica.booker.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 import com.inforica.booker.R;
 import com.inforica.booker.fragments.FragmentDrawer;
-import com.inforica.booker.fragments.HomeFragment;
+import com.inforica.booker.fragments.CalenderPicker;
 
 /**
  * Created by ranjith on 01-05-2016.
@@ -23,6 +24,7 @@ public class MainContent extends AppCompatActivity implements FragmentDrawer.Fra
     private boolean network_status = false;
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
+    public FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,7 @@ public class MainContent extends AppCompatActivity implements FragmentDrawer.Fra
         drawerFragment.setDrawerListener(this);
         ((TextView) mToolbar.getRootView().findViewById(R.id.screen_name)).setText("CHOOSE A MAILBOX");
         // display the first navigation drawer view on app launch
+        fragmentManager = getSupportFragmentManager();
         displayView(0);
 
     }
@@ -79,23 +82,23 @@ public class MainContent extends AppCompatActivity implements FragmentDrawer.Fra
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
+                fragment = new CalenderPicker();
                 break;
             case 1:
-                fragment = new HomeFragment ();
+                fragment = new CalenderPicker();
                 break;
             case 2:
-                fragment = new HomeFragment();
+                fragment = new CalenderPicker();
                 break;
             case 3:
-                fragment = new HomeFragment ();
+                fragment = new CalenderPicker();
                 break;
 
             default:
                 break;
         } // switch case end
         if (fragment != null) {
-            getSupportFragmentManager ().beginTransaction ()
+            fragmentManager.beginTransaction ()
                     .setCustomAnimations (R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left)
                     .replace (R.id.container_body, fragment)
                     .addToBackStack (null)

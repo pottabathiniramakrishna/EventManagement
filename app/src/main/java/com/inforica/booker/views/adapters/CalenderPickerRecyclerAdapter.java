@@ -45,6 +45,12 @@ public class CalenderPickerRecyclerAdapter extends RecyclerView.Adapter<Recycler
                     Intent calender_agenda_intent = new Intent(mActivity, CalenderAgendaViewActivity.class);
                     calender_agenda_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     mActivity.startActivity(calender_agenda_intent);
+
+                  /*  mActivity.getSupportFragmentManager().beginTransaction ()
+                            .setCustomAnimations (R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left)
+                            .replace (R.id.container_body, fragment)
+                            .addToBackStack (null)
+                            .commit ();*/
                 }
             });
 
