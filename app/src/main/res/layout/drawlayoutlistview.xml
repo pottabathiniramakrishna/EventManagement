@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LeftDrawer"
+    android:layout_width="@dimen/slidemenu_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#323232"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+
+        android:background="@color/text_black"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bussiness_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Bussiness Name"
+            android:textColor="#fff"
+            android:textSize="@dimen/veryExtralargeFont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Bussiness Mail"
+            android:textColor="#fff"
+            android:textSize="@dimen/MediumFont" />
+
+        <ListView
+            android:id="@+id/drawer_list"
+            android:layout_width="@dimen/slidemenu_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:divider="@color/separator"
+            android:dividerHeight="0.5dp"
+            android:groupIndicator="@null"
+            android:scrollbars="none"></ListView>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+

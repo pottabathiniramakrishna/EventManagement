@@ -5,113 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.Toolbar
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/custom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/text_black"
+        android:popupTheme="@style/AppTheme"
+        android:theme="@style/ToolbarCustomIconColor"
+        app:popupTheme="@style/AppTheme"
         app:theme="@style/ToolbarCustomIconColor">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+
+        <!--  <ImageView
+         app:theme="@style/ToolbarCustomIconColor"
+              android:id="@+id/app_main_icon"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_gravity="center"
+              android:layout_marginLeft="10dp"
+              android:src="@drawable/ic_icon_white_24dp" />
+
+         &lt;!&ndash; <ImageView
+              android:id="@+id/back_button"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:layout_gravity="center"
+              android:layout_marginLeft="10dp"
+              android:src="@mipmap/ic_launcher"
+              android:visibility="gone" />&ndash;&gt;-->
+        <com.andexert.library.RippleView
+            android:id="@+id/back_button"
+            rv_centered="true"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/margin_10dp"
+                android:paddingBottom="@dimen/margin_10dp"
+                android:src="@drawable/ic_arrow_back_white_18dp" />
+
+        </com.andexert.library.RippleView>
+
+        <com.inforica.booker.utils.CustomTextView
+            android:id="@+id/screen_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-           android:gravity="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Title Text"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/LargeFont"
 
-            android:orientation="horizontal">
+            atts:fontName="@string/fnt_OpenSans_Regular" />
 
-            <!--  <ImageView
-             app:theme="@style/ToolbarCustomIconColor"
-                  android:id="@+id/app_main_icon"
-                  android:layout_width="24dp"
-                  android:layout_height="24dp"
-                  android:layout_gravity="center"
-                  android:layout_marginLeft="10dp"
-                  android:src="@drawable/ic_icon_white_24dp" />
-
-             &lt;!&ndash; <ImageView
-                  android:id="@+id/back_button"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp"
-                  android:layout_gravity="center"
-                  android:layout_marginLeft="10dp"
-                  android:src="@mipmap/ic_launcher"
-                  android:visibility="gone" />&ndash;&gt;-->
-            <com.andexert.library.RippleView
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_gravity="center"
-                rv_centered="true">
-
-                <ImageView
-                    android:id="@+id/back_button"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/ic_arrow_back_white_18dp"
-                    android:padding="@dimen/margin_10dp"
-                    android:visibility="visible"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="@dimen/margin_10dp"/>
-
-            </com.andexert.library.RippleView>
+        <com.andexert.library.RippleView
+            android:id="@+id/edit_button"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:visibility="gone">
 
             <com.inforica.booker.utils.CustomTextView
-                android:id="@+id/screen_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/margin_10dp"
                 android:gravity="center"
-                android:singleLine="true"
-                android:text="Title Text"
+                android:padding="@dimen/margin_10dp"
+                android:text="@string/edit"
                 android:textColor="@color/text_white"
-                android:textSize="@dimen/LargeFont"
+                android:textSize="@dimen/MediumFont"
                 atts:fontName="@string/fnt_OpenSans_Regular" />
+        </com.andexert.library.RippleView>
+        <!--    <ImageView
+                android:id="@+id/sync_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/refresh"
+                android:visibility="gone" />
 
-            <com.andexert.library.RippleView
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/filter_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/filter" />
 
-                <com.inforica.booker.utils.CustomTextView
-                    android:id="@+id/edit_button"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_gravity="right"
-                    android:layout_marginRight="@dimen/margin_10dp"
-                    android:gravity="center"
-                    android:text="@string/edit"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/text_white"
-                    android:textSize="@dimen/MediumFont"
-                    android:padding="@dimen/margin_10dp"
-                    android:visibility="gone"
-                    atts:fontName="@string/fnt_OpenSans_Regular" />
-            </com.andexert.library.RippleView>
-            <!--    <ImageView
-                    android:id="@+id/sync_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/refresh"
-                    android:visibility="gone" />
+            <ImageView
+                android:id="@+id/add_group_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/add_white" />-->
 
-                <ImageView
-                    android:id="@+id/filter_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/filter" />
-
-                <ImageView
-                    android:id="@+id/add_group_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/add_white" />-->
-        </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
 

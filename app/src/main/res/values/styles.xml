@@ -1,19 +1,15 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <!--   <item name="colorPrimary">@color/colorPrimary</item>
-           <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-           <item name="colorAccent">@color/colorAccent</item>-->
-        <!-- <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
-         <item name="android:buttonStyle">@style/RobotoButtonStyle</item>-->
-    </style>
+    <!--    &lt;!&ndash; Base application theme. &ndash;&gt;
+        <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+            &lt;!&ndash; Customize your theme here. &ndash;&gt;
+            &lt;!&ndash;   <item name="colorPrimary">@color/colorPrimary</item>
+               <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+               <item name="colorAccent">@color/colorAccent</item>&ndash;&gt;
+            &lt;!&ndash; <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+             <item name="android:buttonStyle">@style/RobotoButtonStyle</item>&ndash;&gt;
+        </style>-->
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
@@ -33,9 +29,19 @@
     <string name="fnt_OpenSans_Regular">OpenSans-Regular.ttf</string>
     <string name="fnt_OpenSans_semi_bold">OpenSans-Semibold.ttf</string>
 
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/text_white</item>
+        <item name="colorPrimaryDark">@color/text_black</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="ToolbarCustomIconColor" parent="AppTheme">
         <!-- android:textColorSecondary is used for coloring the navigation drawer icon and up arrow. &ndash;&gt;-->
         <item name="android:textColorSecondary">@color/text_white</item>
         <item name="android:textColorPrimary">@color/text_white</item>
     </style>
+
 </resources>

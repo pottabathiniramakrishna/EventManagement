@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.andexert.library.RippleView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -62,7 +63,6 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
     private static final String TAG = "LocationActivity";
     private static final long INTERVAL = 1000 * 10;
     private static final long FASTEST_INTERVAL = 1000 * 5;
-    TextView edit_button;
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
     TextView screen_name;
@@ -71,7 +71,7 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
     GoogleMap googleMap;
     LatLng currentlocation;
     Marker currentlocmarker;
-    ImageView back_button;
+    RippleView back_button,edit_button;
     TextView service_name, service_location, date, start_time, end_time, customer_name, customer_desc, booking_notes, price, days_before, mail_desc, staff_name;
     String StartTime, EndTime, CustomerName, StaffName, Service_Location, Service_Name;
     ImageView staffImage;
@@ -118,9 +118,9 @@ public class BookerDetailsActivity extends FragmentActivity implements LocationL
         }
         screen_name = (TextView) findViewById(R.id.screen_name);
         screen_name.setText("BOOKING DETAILS");
-        edit_button = (TextView) findViewById(R.id.edit_button);
+        edit_button = (RippleView) findViewById(R.id.edit_button);
         edit_button.setVisibility(View.VISIBLE);
-        back_button = (ImageView) findViewById(R.id.back_button);
+        back_button = (RippleView) findViewById(R.id.back_button);
         back_button.setVisibility(View.VISIBLE);
         back_button.setOnClickListener(this);
 

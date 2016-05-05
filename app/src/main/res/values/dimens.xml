@@ -31,5 +31,7 @@
 
     <!--Booking Details Activity-->
     <dimen name="map_height">200dp</dimen>
-
+    <!--panel width-->
+    <dimen name="slidemenu_width">270dp</dimen>
+    <dimen name="slidemenu_indicator_left">170dp</dimen>
 </resources>

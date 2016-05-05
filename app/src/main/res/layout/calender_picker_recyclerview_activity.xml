@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <android.support.v7.widget.Toolbar
+
+    <!--    <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/text_black">
@@ -25,19 +26,20 @@
                 android:textSize="@dimen/margin_20dp"
                 atts:fontName="@string/fnt_OpenSans_Regular" />
 
-        </android.support.v7.widget.Toolbar>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        </android.support.v7.widget.Toolbar>-->
+         <include layout="@layout/toolbar_layout" />
         <android.support.v7.widget.RecyclerView
             android:id="@+id/calender_recycler_list"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:scrollbars="none" />
     </LinearLayout>
+
+ <!--   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>-->
 </LinearLayout>
